@@ -30,11 +30,21 @@ Before you begin, make sure you have the following:
 - **Live Server**: If using VS Code install Live Server from extensions
 
 ### Installing
-git clone
+**1. Clone Repository**:
+```bash
+git clone https://github.com/musfirah111/Climate-Cloud-Weather-App.git
+```
+
+**2. Navigate to Project Directory**:
+```bash
+    cd Climate-Cloud-Weather-App
+```
 
 ### Executing the Program
 
-1. Open Visual Studio Code and navigate to your project.
-2. In the Explorer pane, right-click on the HTML file (e.g., `index.html`).
-3. Select **Open with Live Server**.
+1.  Open Visual Studio Code.
+2.  Navigate to your project.
+3.  Add your API key in a particular API call URL.
+4.  In the Explorer pane, right-click on the HTML file (e.g., `index.html`).
+5.  Select **Open with Live Server**.
 
