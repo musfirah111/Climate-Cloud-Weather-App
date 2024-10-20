@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style1.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="sideMenu">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+            <h2 style = "color: white;">Climate Cloud </h2>
+        </div>
+
+        <nav>
+            <ul class="nav_List">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="Table.html">Tables</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main_content">
+        <div class="searchBar">
+            <input type="text" placeholder="city" required id = "get-city_input">
+            <button id="get-city">
+                <i class="fas fa-search"></i>
+            </button>
+
+        </div>
+
+        <div class="profile">
+            <img src="images/user.png" alt="user profile">
+            <h4>Musfirah</h4>
+        </div>
+
+        <div class="weather-widget">
+            <div id="oneMoreDiv">
+                <img id="weatherIcon" src="" alt="i" style="width: 50px; height: 50px; margin-top: 40px;">
+                <div class="leftInfo">
+                    <div class="tempinfo">
+                        <p id="temperature"><span>22</span> </p>
+                        <span id="tempUnit"><button id = "C_temp">°C </button>|<button id = "F_temp">°F </button></span>
+                        
+                    </div>
+                    <div class=stats>
+                        <p id="humidity">
+                            <!-- <i class="fas fa-tint icon" style = "font-size: 15px;"></i> -->
+                            <strong>Humidity: </strong> <span>0</span>%
+                        </p>
+
+                        <p id="windSpeed" style="margin-bottom: 35px;">
+                            <!-- <i class="fas fa-wind icon" style = "font-size: 15px;"></i> -->
+                            <strong>Wind: </strong><span>0</span> km/h
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "citydiv">
+                <p id="city"><span>city</span></p>
+            </div>
+
+            <div class="Info">
+                <p id="weatherHeading">Weather</p>
+                <p id="date"><span>current date</span></p>
+                <p id="weatherDescription"><span>description</span></p>
+            </div>
+        </div>
+
+
+        <div class=canvaBox>
+            <canvas id="vertical_BarChart"></canvas>
+            <canvas id="doughnut_Chart"></canvas>
+            <canvas id="line_Chart"></canvas>
+        </div>
+
+
+
+    </main>
+
+
+    <script src="Dashboard_jQuery.js"></script>
+</body>
+
+</html>
