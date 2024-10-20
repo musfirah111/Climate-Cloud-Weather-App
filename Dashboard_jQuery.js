@@ -86,16 +86,27 @@ $(document).ready(function () {
 
     
     //when search button clicked do the following actions
-    $('#get-city').on('click', function (event) { 
-        event.preventDefault();
-        fetchWeatherData();
+    $('#get-city').on('click', function () {
+        let city = $('#get-city_input').val().trim(); 
+        
+        if (city === "") {
+            alert("Input field is empty. Please enter a city name.");
+        } else {
+            fetchCityWeather();
+        }
     });
     
     //when enter button pressed do the following actions
     $('.searchBar input[type="text"]').on('keydown', function (event) {
+        let city = $(this).val().trim(); 
         if (event.key === 'Enter') {
             event.preventDefault();
-            fetchWeatherData();
+            
+            if (city === "") {
+                alert("Input field is empty. Please enter a city name.");
+            } else {
+                fetchWeatherData();
+            }
         }
     });
     
