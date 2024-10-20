@@ -23,16 +23,28 @@ $(document).ready(function () {
         }
     }
 
-    //when search button pressed after entering city do the following actions
+    //when search button clicked do the following actions
     $('#get-city').on('click', function () {
-        fetchCityWeather();
+        let city = $('#get-city_input').val().trim(); 
+        
+        if (city === "") {
+            alert("Input field is empty. Please enter a city name.");
+        } else {
+            fetchCityWeather();
+        }
     });
     
-    //when enter button is pressed do the following actions
+    //when enter button pressed do the following actions
     $('.searchBar input[type="text"]').on('keydown', function (event) {
+        let city = $(this).val().trim(); 
         if (event.key === 'Enter') {
-            event.preventDefault(); // Prevent form submission if inside a form
-            fetchCityWeather();
+            event.preventDefault();
+            
+            if (city === "") {
+                alert("Input field is empty. Please enter a city name.");
+            } else {
+                fetchWeatherData();
+            }
         }
     });
     
